@@ -4,6 +4,20 @@ body {
   padding: 0;
 }
 
+body.dimmed {
+  position: relative;
+}
+
+body.dimmed:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 header {
   height: 100px;
   display: flex;
@@ -19,7 +33,8 @@ header h2 {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 main .wordle-con {
@@ -43,6 +58,10 @@ main .wordle-con .wordle-block .wordle-area .wordle-each {
   height: 50px;
   border: 2px solid rgba(0, 0, 0, 0.05);
   transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
 }
 
 main .wordle-con .wordle-block .wordle-area .wordle-each:hover {
@@ -66,9 +85,49 @@ main .wordle-con .wordle-key > div > div {
   justify-content: center;
   align-items: center;
   font-size: 17px;
+  cursor: pointer;
 }
 
 main .wordle-con .wordle-key > div#bottom > div.enter,
 main .wordle-con .wordle-key > div#bottom > div.back {
   width: 80px;
+}
+
+main .wordle-msg {
+  display: none;
+  width: 300px;
+  height: 100px;
+  position: fixed;
+  z-index: 11;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+main .wordle-msg .buttons {
+  width: 100%;
+}
+
+main .wordle-msg .buttons button {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  background-color: rgb(220, 60, 80);
+  color: #fff;
+  cursor: pointer;
+}
+
+main .timer-wrap {
+  font-size: 28px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 8px;
 }
