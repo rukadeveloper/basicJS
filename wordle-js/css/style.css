@@ -1,0 +1,74 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+header h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main .wordle-con {
+  width: 500px;
+  margin: 0 auto;
+}
+
+main .wordle-con .wordle-block {
+  margin-top: 8px;
+}
+
+main .wordle-con .wordle-block .wordle-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  justify-content: center;
+}
+
+main .wordle-con .wordle-block .wordle-area .wordle-each {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s;
+}
+
+main .wordle-con .wordle-block .wordle-area .wordle-each:hover {
+  border: 2px solid rgb(205, 80, 251);
+}
+
+main .wordle-con .wordle-key > div {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+main .wordle-con .wordle-key > div > div {
+  width: 50px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: rgb(78, 77, 77);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
+
+main .wordle-con .wordle-key > div#bottom > div.enter,
+main .wordle-con .wordle-key > div#bottom > div.back {
+  width: 80px;
+}
